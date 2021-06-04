@@ -11,14 +11,14 @@ public:
         else{
             healths[rows - 1][columns - 1] = dungeon[rows - 1][columns - 1] + 1;
         }
-        for(int i = rows - 1; i >= 0; i--){
+        for(int i = rows - 2; i >= 0; i--){
             healths[i][0] = healths[i + 1][0]  - dungeon[i][0];
         }
-        for(int j = columns - 1; j >= 0; j--){
+        for(int j = columns - 2; j >= 0; j--){
             healths[0][j] = healths[0][j + 1]  - dungeon[0][j];
         }
-        for(int i = rows - 1; i >= 0; i--){
-            for(int j = columns - 1; j >= 0; j--){
+        for(int i = rows - 2; i >= 0; i--){
+            for(int j = columns - 2; j >= 0; j--){
                 healths[i][j] = min(healths[i][j + 1], healths[i + 1][j])  - dungeon[i][j];
             }
         }
