@@ -1,8 +1,4 @@
-/*
-300 people 200 pies = 1/2 pie per person
-find maximum number of people who need to share 1 pie
-use areas of pie
-*/
+//
 #include <iostream>
 using namespace std;
 
